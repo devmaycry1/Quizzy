@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("./assets/ImagemDeFundo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* títulos usam Outfit */
+h1,
+h2,
+h3 {
+  font-family: "Outfit", sans-serif;
+}

@@ -1,0 +1,25 @@
+.splash-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+}
+
+.splash-logo {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.splash-text {
+    font-size: 20px;
+    opacity: 0.9;
+}

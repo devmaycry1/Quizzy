@@ -3,6 +3,7 @@
   align-items: center;
   border-bottom: 2px solid white;
   padding: 8px;
+  gap: 12px;
 }
 
 .input-field input {
@@ -23,6 +24,8 @@
   font-weight: 500;
 }
 
-.icon {
-  margin-right: 10px;
+.input-icon {
+  font-size: 20px;
+  color: white;
+  min-width: 20px;
 }

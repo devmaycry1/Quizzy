@@ -4,20 +4,21 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll lateral indesejado */
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url("./assets/ImagemDeFundo.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* títulos usam Outfit */
 h1,
 h2,
 h3 {

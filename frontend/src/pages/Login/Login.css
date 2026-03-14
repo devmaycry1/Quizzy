@@ -1,17 +1,19 @@
-.login {
+.login-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url("../../assets/background.png");
+    width: 100%;
+    background-image: url("../../assets/Background.png");
     background-size: cover;
     background-position: center;
+    background-attachment: scroll;
+    overflow-x: hidden;
     font-family: "Outfit", sans-serif;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-.login-card {
+.login-page-card {
     width: 420px;
     padding: 40px;
 
@@ -37,8 +39,6 @@
     margin-bottom: 30px;
     font-family: "Outfit", sans-serif;
     font-weight: 500;
-    font-size: 28px;
-
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
@@ -48,7 +48,7 @@
     gap: 25px;
 }
 
-.register {
+.login-footer {
     margin-top: 25px;
     font-family: "Outfit", sans-serif;
     font-weight: 500;
@@ -57,8 +57,12 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-.register span {
+.login-footer span {
     color: yellow;
     cursor: pointer;
     font-weight: bold;
+}
+
+.login-footer span:hover {
+    opacity: 0.8;
 }

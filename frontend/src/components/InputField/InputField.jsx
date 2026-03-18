@@ -15,17 +15,27 @@ export default function InputField({
   icon: Icon,
   value,
   onChange,
+  error,
+  ...rest
 }) {
   return (
-    <div className="input-field">
-      {Icon && <Icon className="input-icon" />}
+    
+    <div className="input-container">
+      
+      <div className={`input-field ${error ? "input-field-error" : ""}`}>
+        {Icon && <Icon className="input-icon" />}
 
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          {...rest} 
+        />
+      </div>
+
+      {error && <span className="input-mensagem-erro">{error}</span>}
+      
     </div>
   );
 }

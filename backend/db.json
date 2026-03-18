@@ -1,52 +1,59 @@
 {
-    "usuarios": [
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Carlos Luiz",
+      "email": "carlos@email.com",
+      "senha": "123"
+    },
+    {
+      "id": "3b20",
+      "nome": "Rick Sanchez",
+      "email": "rick.sanchez@email.com",
+      "senha": "rick1234"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "1",
+      "titulo": "Fundamentos de React",
+      "usuarioId": "1",
+      "dataCriacao": "2026-03-08T10:00:00Z",
+      "perguntas": [
         {
-            "id": "1",
-            "nome": "Carlos Luiz",
-            "email": "carlos@email.com",
-            "senha": "123"
+          "id": "p1",
+          "texto": "O que é um Hook no React?",
+          "alternativas": [
+            {
+              "texto": "Uma classe",
+              "isCorreta": false
+            },
+            {
+              "texto": "Uma função que permite ligar recursos de estado e ciclo de vida",
+              "isCorreta": true
+            },
+            {
+              "texto": "Um componente visual",
+              "isCorreta": false
+            },
+            {
+              "texto": "Um banco de dados",
+              "isCorreta": false
+            }
+          ]
         }
-    ],
-    "quizzes": [
-        {
-            "id": "1",
-            "titulo": "Fundamentos de React",
-            "usuarioId": "1",
-            "dataCriacao": "2026-03-08T10:00:00Z",
-            "perguntas": [
-                {
-                    "id": "p1",
-                    "texto": "O que é um Hook no React?",
-                    "alternativas": [
-                        {
-                            "texto": "Uma classe",
-                            "isCorreta": false
-                        },
-                        {
-                            "texto": "Uma função que permite ligar recursos de estado e ciclo de vida",
-                            "isCorreta": true
-                        },
-                        {
-                            "texto": "Um componente visual",
-                            "isCorreta": false
-                        },
-                        {
-                            "texto": "Um banco de dados",
-                            "isCorreta": false
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "tentativas": [
-        {
-            "id": "1",
-            "usuarioId": "1",
-            "origemQuiz": "Conhecimentos Gerais",
-            "acertos": 12,
-            "totalPerguntas": 15,
-            "dataHora": "2026-03-08T10:05:00Z"
-        }
-    ]
+      ]
+    }
+  ],
+  "tentativas": [
+    {
+      "id": "1",
+      "usuarioId": "1",
+      "origemQuiz": "Conhecimentos Gerais",
+      "acertos": 12,
+      "totalPerguntas": 15,
+      "dataHora": "2026-03-08T10:05:00Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

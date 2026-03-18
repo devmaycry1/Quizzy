@@ -3,23 +3,103 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+
     background-image: url("../../assets/background.png");
     background-size: cover;
     background-position: center;
 }
 
+/* Overlay suave para melhorar contraste */
+.splash-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.55)
+    );
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+/* ===== CONTEÚDO ===== */
 .splash-content {
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 1;
+
+    animation: fadeZoom 1.4s ease forwards;
 }
 
+/* ===== LOGO ===== */
 .splash-logo {
     font-size: 64px;
     font-weight: bold;
     letter-spacing: 4px;
+
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 0.3s;
+
+    /* brilho moderno */
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.3),
+        0 0 25px rgba(255,255,255,0.15);
 }
 
+/* efeito hover opcional */
+.splash-logo:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease;
+}
+
+/* ===== TEXTO ===== */
 .splash-text {
     font-size: 20px;
-    opacity: 0.9;
+    opacity: 0;
+
+    margin-top: 12px;
+    letter-spacing: 1px;
+
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.9s;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
 }

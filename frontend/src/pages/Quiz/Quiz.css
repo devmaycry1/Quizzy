@@ -1,6 +1,3 @@
-/* =========================================
-   ESTRUTURA DA PÁGINA DE QUIZ
-   ========================================= */
 .quiz-page {
     min-height: 100vh;
     display: flex;
@@ -36,9 +33,6 @@
     }
 }
 
-/* =========================================
-   PAINEL DO QUIZ (VIDRO)
-   ========================================= */
 .quiz-container {
     width: 100%;
     max-width: 800px;
@@ -46,7 +40,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    /* Herda o vidro que já configuramos no Home.css, mas se quiser garantir: */
     background: rgba(140, 82, 255, 0.2);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -71,9 +64,6 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* =========================================
-   BOTÕES DE ALTERNATIVAS
-   ========================================= */
 .options-grid {
     display: flex;
     flex-direction: column;
@@ -99,36 +89,30 @@
     transform: translateY(-2px);
 }
 
-/* Cores de Feedback (Certo/Errado) */
 .option-btn.correct {
     background: rgba(40, 167, 69, 0.8);
-    /* Verde vibrante */
     border-color: #28a745;
     color: white;
 }
 
 .option-btn.incorrect {
     background: rgba(220, 53, 69, 0.8);
-    /* Vermelho */
     border-color: #dc3545;
     color: white;
 }
 
-/* Diminui o destaque das outras opções que não foram escolhidas */
 .option-btn.disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-/* =========================================
-   BOTÃO PRÓXIMA PERGUNTA
-   ========================================= */
 .next-btn {
-    background: linear-gradient(to right, #4c1182, #8800FF);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #4c1182, #8800FF);
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 18px;
+    padding: 13px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
@@ -139,5 +123,38 @@
 
 .next-btn:hover {
     transform: translateY(-2px);
-    background: linear-gradient(to right, #8800FF, #4c1182);
+    background: linear-gradient(to bottom, #8800FF, #4c1182);
+}
+
+.quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    min-height: 50px; 
+}
+
+.quit-btn {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ff0000, #be1313);
+    border: 1px solid rgba(220, 53, 69, 0.5); 
+    color: #ffffff; 
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quit-btn:hover {
+   background: linear-gradient(to bottom, #ff0000, #af1813);
+    border-color: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+.next-btn {
+    margin-top: 0;
 }

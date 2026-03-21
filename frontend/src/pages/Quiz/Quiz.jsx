@@ -108,6 +108,13 @@ export default function Quiz() {
         }
     };
 
+    const handleDesistir = () => {
+        const confirmar = window.confirm("Tem certeza que deseja desistir? Seu progresso será perdido.");
+        if (confirmar) {
+            navigate("/home");
+        }
+    };
+
     if (carregando) {
         return (
             <div className="quiz-page loading-screen">
@@ -159,11 +166,17 @@ export default function Quiz() {
                     })}
                 </div>
 
-                {isRespondido && (
-                    <button className="next-btn" onClick={handleProximaPergunta}>
-                        {perguntaAtual + 1 === perguntas.length ? "Ver Resultados" : "Próxima Pergunta"}
+                <div className="quiz-footer">
+                    <button className="quit-btn" onClick={handleDesistir}>
+                        Desistir
                     </button>
-                )}
+
+                    {isRespondido && (
+                        <button className="next-btn" onClick={handleProximaPergunta}>
+                            {perguntaAtual + 1 === perguntas.length ? "Ver Resultados" : "Próxima Pergunta"}
+                        </button>
+                    )}
+                </div>
 
             </div>
         </main>

@@ -18,7 +18,7 @@
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-* **[React (Vite)](https://vitejs.dev/)
-* **[JSON Server](https://github.com/typicode/json-server)
-* **CSS
-* **JavaScript
+* **[React (Vite)](https://vitejs.dev/)**
+* **[JSON Server](https://github.com/typicode/json-server)**
+* **CSS**
+* **JavaScript**

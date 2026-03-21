@@ -55,4 +55,4 @@ Execute no terminal:
 npm run dev
 
 6. **Acesse o navegador:**
-Abra http://localhost:5173(ou a porta que foi indicada no seu terminal)    
+Abra http://localhost:5173 (ou a porta que foi indicada no seu terminal)    

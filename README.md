@@ -38,34 +38,26 @@ Certifique-se de ter o **[Node.js](https://nodejs.org/)** instalado na sua máqu
 
 2. **Acesse as pastas frontend e backend**
 
-Execute no terminal:
-
-cd backend
-
-cd frontend
+  Execute no terminal:
+  cd backend
+  cd frontend
 
 3. **Instale as dependências:**
 
-Execute no terminal:
-
-npm install
+  Execute no terminal:
+  npm install
   
 4. **Inicie o JSON Server**
 
-Na pasta backend
-
-Execute no terminal:
-
-npm start
+  Na pasta backend
+  Execute no terminal:
+  npm start
 
 5. **Inicie a aplicação React:**
 
-Na pasta frontend
-
-Execute no terminal:
-
-npm run dev
+  Na pasta frontend
+  Execute no terminal:
+  npm run dev
 
 6. **Acesse o navegador:**
-
-Abra http://localhost:5173 (ou a porta que foi indicada no seu terminal)    
+  Abra http://localhost:5173 (ou a porta que foi indicada no seu terminal)    

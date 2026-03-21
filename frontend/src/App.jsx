@@ -16,11 +16,12 @@ export default function App() {
         <Route path="/" element={<Splash />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/home" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/resultado" element={<Resultado/>} />
+          <Route path="/resultado" element={<Resultado />} />
         </Route>
       </Routes>
     </BrowserRouter>

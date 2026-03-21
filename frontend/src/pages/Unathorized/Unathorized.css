@@ -1,6 +1,4 @@
-/* src/pages/NotFound/NotFound.css */
-
-.not-found-page {
+.unauthorized-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,15 +10,16 @@
     background-position: center;
 }
 
-.not-found-container {
+.unauthorized-container {
     width: 100%;
     max-width: 600px;
     text-align: center;
-    padding: 60px 40px;
+    padding: 50px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
     background: rgba(140, 82, 255, 0.2);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -29,16 +28,35 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+.lock-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(220, 53, 69, 0.2);
+    border: 3px solid rgba(220, 53, 69, 0.5);
+    margin-bottom: -10px;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.4);
+}
+
+.lock-icon {
+    font-size: 40px;
+    color: #ffb3b3;
+}
+
 .error-code {
-    font-size: 120px;
+    font-size: 80px;
     font-weight: 900;
     line-height: 1;
     margin: 0;
-    background: linear-gradient(to bottom, #C79AFE, #8800FF);
+
+    background: linear-gradient(to bottom, #ffb3b3, #dc3545);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 15px rgba(136, 0, 255, 0.6));
+    filter: drop-shadow(0 4px 10px rgba(220, 53, 69, 0.4));
 }
 
 .error-title {
@@ -55,7 +73,7 @@
     margin-bottom: 20px;
 }
 
-.not-found-btn {
+.unauthorized-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +90,7 @@
     box-shadow: 0 4px 15px rgba(136, 0, 255, 0.4);
 }
 
-.not-found-btn:hover {
+.unauthorized-btn:hover {
     transform: translateY(-2px);
     background: linear-gradient(to right, #8800FF, #4c1182);
     box-shadow: 0 6px 20px rgba(136, 0, 255, 0.6);

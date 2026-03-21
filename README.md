@@ -29,6 +29,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 Para rodar o Quizzy localmente na sua máquina, siga os passos abaixo:
 
 ### Pré-requisitos
+
 Certifique-se de ter o **[Node.js](https://nodejs.org/)** instalado na sua máquina.
 
 ### Passo a passo
@@ -36,23 +37,35 @@ Certifique-se de ter o **[Node.js](https://nodejs.org/)** instalado na sua máqu
 1. **Clone o repositório:**
 
 2. **Acesse as pastas frontend e backend**
+
 Execute no terminal:
+
 cd backend
+
 cd frontend
 
 3. **Instale as dependências:**
+
 Execute no terminal:
+
 npm install
   
 4. **Inicie o JSON Server**
+
 Na pasta backend
+
 Execute no terminal:
+
 npm start
 
 5. **Inicie a aplicação React:**
+
 Na pasta frontend
+
 Execute no terminal:
+
 npm run dev
 
 6. **Acesse o navegador:**
+
 Abra http://localhost:5173 (ou a porta que foi indicada no seu terminal)    

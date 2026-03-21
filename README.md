@@ -1,6 +1,6 @@
 # 💜 Quizzy
 
-> Uma aplicação web interativa e imersiva de perguntas e respostas (Quiz) construída com React e integrada à API do Open Trivia Database.
+> Uma aplicação web interativa de perguntas e respostas (Quiz) construída com React e integrada à API do Open Trivia Database.
 
 ## ✨ Funcionalidades
 

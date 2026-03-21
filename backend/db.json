@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/json-server/schema.json",
   "usuarios": [
     {
       "id": "1",
@@ -54,6 +55,5 @@
       "totalPerguntas": 15,
       "dataHora": "2026-03-08T10:05:00Z"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

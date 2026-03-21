@@ -1,0 +1,143 @@
+/* =========================================
+   ESTRUTURA DA PÁGINA DE QUIZ
+   ========================================= */
+.quiz-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-image: url("../../assets/Background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.loading-screen {
+    flex-direction: column;
+}
+
+.loading-text {
+    font-size: 24px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* =========================================
+   PAINEL DO QUIZ (VIDRO)
+   ========================================= */
+.quiz-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Herda o vidro que já configuramos no Home.css, mas se quiser garantir: */
+    background: rgba(140, 82, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.question-text {
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   BOTÕES DE ALTERNATIVAS
+   ========================================= */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-size: 18px;
+    font-family: inherit;
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Cores de Feedback (Certo/Errado) */
+.option-btn.correct {
+    background: rgba(40, 167, 69, 0.8);
+    /* Verde vibrante */
+    border-color: #28a745;
+    color: white;
+}
+
+.option-btn.incorrect {
+    background: rgba(220, 53, 69, 0.8);
+    /* Vermelho */
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Diminui o destaque das outras opções que não foram escolhidas */
+.option-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   BOTÃO PRÓXIMA PERGUNTA
+   ========================================= */
+.next-btn {
+    background: linear-gradient(to right, #4c1182, #8800FF);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(136, 0, 255, 0.4);
+}
+
+.next-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #8800FF, #4c1182);
+}

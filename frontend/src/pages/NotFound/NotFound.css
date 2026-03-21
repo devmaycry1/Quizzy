@@ -1,0 +1,78 @@
+/* src/pages/NotFound/NotFound.css */
+
+.not-found-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-image: url("../../assets/Background2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.not-found-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(140, 82, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    background: linear-gradient(to bottom, #C79AFE, #8800FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 15px rgba(136, 0, 255, 0.6));
+}
+
+.error-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error-msg {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.not-found-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to right, #4c1182, #8800FF);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(136, 0, 255, 0.4);
+}
+
+.not-found-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #8800FF, #4c1182);
+    box-shadow: 0 6px 20px rgba(136, 0, 255, 0.6);
+}

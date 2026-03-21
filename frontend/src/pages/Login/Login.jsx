@@ -41,7 +41,7 @@ export default function Login() {
 
       if (data.length > 0) {
         const usuario = data[0];
-        const { senha, ...dadosSessao } = usuario;
+        const { _senha, ...dadosSessao } = usuario;
         localStorage.setItem("usuarioLogado", JSON.stringify(dadosSessao));
         navigate("/home");
 

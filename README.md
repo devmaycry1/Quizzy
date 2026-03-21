@@ -21,13 +21,3 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 * **[React (Vite)](https://vitejs.dev/)
 * **[JSON Server](https://github.com/typicode/json-server)
 * **CSS3
-
----
-
-## 🛠️ Como Executar o Projeto
-
-Para rodar o Quizzy localmente na sua máquina, siga os passos abaixo:
-
-### Pré-requisitos
-
-Certifique-se de ter o **[Node.js](https://nodejs.org/)** instalado na sua máquina.

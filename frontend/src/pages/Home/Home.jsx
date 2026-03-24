@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FiPlay, FiPlus } from "react-icons/fi";
+import { FiPlay, FiPlus, FiList } from "react-icons/fi";
 import "./Home.css";
 import { CATEGORIAS_OPENTDB } from "../../utils/constantes";
 
@@ -92,9 +92,21 @@ export default function Home() {
             </section>
 
             <footer className="home-footer">
-                <button className="create-quiz-btn" onClick={() => navigate("/criar-quiz")}>
-                    <FiPlus className="plus-icon" /> Criar Novo Quiz
-                </button>
+                <div className="user-actions-row">
+                    <button
+                        className="create-quiz-btn"
+                        onClick={() => navigate("/criar-quiz")}
+                    >
+                        <FiPlus /> Criar Novo Quiz
+                    </button>
+
+                    <button
+                        className="my-quizzes-btn"
+                        onClick={() => navigate("/meus-quizzes")}
+                    >
+                        <FiList /> Seus Quizzes
+                    </button>
+                </div>
             </footer>
         </main>
     );

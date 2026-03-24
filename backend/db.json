@@ -1,59 +1,123 @@
 {
-  "$schema": "./node_modules/json-server/schema.json",
   "usuarios": [
     {
       "id": "1",
-      "nome": "Carlos Luiz",
-      "email": "carlos@email.com",
-      "senha": "123"
-    },
-    {
-      "id": "3b20",
       "nome": "Rick Sanchez",
-      "email": "rick.sanchez@email.com",
+      "email": "rick@email.com",
       "senha": "rick1234"
     }
   ],
   "quizzes": [
     {
-      "id": "1",
-      "titulo": "Fundamentos de React",
-      "usuarioId": "1",
-      "dataCriacao": "2026-03-08T10:00:00Z",
+      "id": "9f87",
+      "titulo": "O que você sabe sobre Rock?",
+      "descricao": "Quiz onde você pode testar seus conhecimentos sobre o gênero musical Rock.",
+      "autorId": "3b20",
+      "autorNome": "Rick Sanchez",
+      "dataCriacao": "2026-03-24T19:16:07.994Z",
       "perguntas": [
         {
-          "id": "p1",
-          "texto": "O que é um Hook no React?",
+          "enunciado": "Qual banda lançou o álbum \"The Dark Side of The Moon\" ?",
           "alternativas": [
-            {
-              "texto": "Uma classe",
-              "isCorreta": false
-            },
-            {
-              "texto": "Uma função que permite ligar recursos de estado e ciclo de vida",
-              "isCorreta": true
-            },
-            {
-              "texto": "Um componente visual",
-              "isCorreta": false
-            },
-            {
-              "texto": "Um banco de dados",
-              "isCorreta": false
-            }
-          ]
+            "Pink Floyd",
+            "Queen",
+            "The Who",
+            "Led Zeppelin"
+          ],
+          "respostaCertaIndex": 0
+        },
+        {
+          "enunciado": "Quem foi o vocalista da banda Nirvana?",
+          "alternativas": [
+            "Kurt Cobain",
+            "Chris Cornell",
+            "Fred Mercury",
+            "Dave Grohl"
+          ],
+          "respostaCertaIndex": 0
+        },
+        {
+          "enunciado": "Qual dessas bandas é conhecida pela música Bohemian Rhapsody?",
+          "alternativas": [
+            "The Rolling Stones",
+            "The Beatles",
+            "Queen",
+            "Nirvana"
+          ],
+          "respostaCertaIndex": 2
+        },
+        {
+          "enunciado": "Em que país surgiu a banda AC/DC?",
+          "alternativas": [
+            "Estados Unidos",
+            "Inglaterra",
+            "Austrália",
+            "Espanha"
+          ],
+          "respostaCertaIndex": 2
+        },
+        {
+          "enunciado": "Qual banda é famosa pelo álbum Master of Puppets?",
+          "alternativas": [
+            "Nirvana",
+            "RHCP",
+            "Linkin Park",
+            "Metallica"
+          ],
+          "respostaCertaIndex": 3
+        },
+        {
+          "enunciado": "Qual dessas bandas NÃO faz parte do movimento grunge?",
+          "alternativas": [
+            "Linkin Park",
+            "Pearl Jam",
+            "Nirvana",
+            "Soundgarden"
+          ],
+          "respostaCertaIndex": 0
+        },
+        {
+          "enunciado": "Quem foi o guitarrista lendário da banda Queen?",
+          "alternativas": [
+            "Slash",
+            "Brian May",
+            "John Frusciante",
+            "Jimmie Page"
+          ],
+          "respostaCertaIndex": 1
+        },
+        {
+          "enunciado": "Qual banda lançou o álbum Nevermind em 1991?",
+          "alternativas": [
+            "RHCP",
+            "Eagles",
+            "Queen",
+            "Nirvana"
+          ],
+          "respostaCertaIndex": 3
+        },
+        {
+          "enunciado": "Qual dessas bandas é britânica?",
+          "alternativas": [
+            "Aerosmith",
+            "Bon Jovi",
+            "Quiz",
+            "The Beatles"
+          ],
+          "respostaCertaIndex": 3
+        },
+        {
+          "enunciado": "Qual banda ficou famosa pelo álbum Hybrid Theory?",
+          "alternativas": [
+            "Audioslave",
+            "Paramore",
+            "RHCP",
+            "Linkin Park"
+          ],
+          "respostaCertaIndex": 3
         }
       ]
     }
   ],
-  "tentativas": [
-    {
-      "id": "1",
-      "usuarioId": "1",
-      "origemQuiz": "Conhecimentos Gerais",
-      "acertos": 12,
-      "totalPerguntas": 15,
-      "dataHora": "2026-03-08T10:05:00Z"
-    }
-  ]
+  "$schema": "./node_modules/json-server/schema.json"
 }

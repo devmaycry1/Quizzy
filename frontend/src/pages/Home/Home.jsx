@@ -92,7 +92,7 @@ export default function Home() {
             </section>
 
             <footer className="home-footer">
-                <button className="create-quiz-btn" onClick={() => navigate("/criar")}>
+                <button className="create-quiz-btn" onClick={() => navigate("/criar-quiz")}>
                     <FiPlus className="plus-icon" /> Criar Novo Quiz
                 </button>
             </footer>

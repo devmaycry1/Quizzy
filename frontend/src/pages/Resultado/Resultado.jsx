@@ -7,7 +7,6 @@ export default function Resultado() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // 1. Recebemos os dados
     const { acertos, totalPerguntas, nomeCategoria, nomeUsuario } = location.state || {
         acertos: 0,
         totalPerguntas: 10,
@@ -15,17 +14,14 @@ export default function Resultado() {
         nomeUsuario: "Usuário"
     };
 
-    // 2. Proteção de Rota
     useEffect(() => {
         if (!location.state) {
             navigate("/home");
         }
     }, [location.state, navigate]);
 
-    // 3. Calculamos a porcentagem direto na renderização
     const porcentagem = totalPerguntas > 0 ? (acertos / totalPerguntas) * 100 : 0;
 
-    // 4. Variáveis derivadas (sem usar useState)
     let mensagemDesempenho = "";
     let iconeDesempenho = null;
     let corPorcentagem = "";

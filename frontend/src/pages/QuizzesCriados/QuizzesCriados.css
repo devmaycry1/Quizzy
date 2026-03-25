@@ -1,0 +1,118 @@
+.meus-quizzes-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background-image: url("../../assets/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.meus-quizzes-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px 40px;
+}
+
+.meus-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.quizzes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.quiz-card {
+    background: rgba(14, 0, 24, 0.3);
+    border: 1px solid rgba(199, 154, 254, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(136, 0, 255, 0.3);
+    border-color: rgba(199, 154, 254, 0.8);
+}
+
+.quiz-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.quiz-desc {
+    font-size: 14px;
+    color: #dcdcdc;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #C79AFE;
+    margin-bottom: 20px;
+}
+
+.quiz-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-play-custom {
+    width: 100%;
+    background: linear-gradient(to right, #4c1182, #8800FF);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.btn-play-custom:hover{
+    transform: translateY(-2px);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.empty-state p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-create-first {
+    background: transparent;
+    border: 2px solid #C79AFE;
+    color: #C79AFE;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+}

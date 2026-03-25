@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { CATEGORIAS_OPENTDB } from "../../utils/constantes"; // Importando as categorias
+import { CATEGORIAS_OPENTDB } from "../../utils/constantes"; 
 import "./Quiz.css";
 
 const decodificarHTML = (html) => {
@@ -39,6 +39,41 @@ export default function Quiz() {
         }
 
         const buscarPerguntas = async () => {
+
+            const customId = searchParams.get("customId");
+
+            if (customId) {
+                try {
+                    const response = await fetch(`http://localhost:3000/quizzes?id=${customId}`);
+                    const data = await response.json();
+                    const quizData = data.length > 0 ? data[0] : null;
+
+                    if (quizData && quizData.perguntas) {
+                        const perguntasFormatadas = quizData.perguntas.map((p) => {
+                            return {
+                                pergunta: p.enunciado,
+                                respostas: p.alternativas,
+                                respostaCerta: p.alternativas[p.respostaCertaIndex],
+                            };
+                        });
+
+                        setPerguntas(perguntasFormatadas);
+                        setNomeCategoria(quizData.titulo);
+                    } else {
+                        alert("Quiz não encontrado no banco de dados.");
+                        navigate("/home");
+                    }
+                } catch (error) {
+                    console.error("Erro ao buscar quiz customizado:", error);
+                    alert("Erro de conexão ao carregar o quiz customizado.");
+                    navigate("/home");
+                } finally {
+                    setCarregando(false);
+                }
+                
+                return;
+            }
+
             const amount = searchParams.get("amount") || 10;
             const category = searchParams.get("category") || "";
             const difficulty = searchParams.get("difficulty") || "";

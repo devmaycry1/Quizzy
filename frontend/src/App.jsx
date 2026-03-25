@@ -13,6 +13,7 @@ import CriarQuiz from "./pages/CriarQuiz/CriarQuiz";
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import PageTransition from "./components/PageEffect/PageEffect";
+import QuizzesCriados from "./pages/QuizzesCriados/QuizzesCriados";
 
 function RotasAnimadas() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function RotasAnimadas() {
           <Route path="/quiz" element={<PageTransition><Quiz /></PageTransition>} />
           <Route path="/resultado" element={<PageTransition><Resultado /></PageTransition>} />
           <Route path="/criar-quiz" element={<PageTransition><CriarQuiz /></PageTransition>} />
+          <Route path="/meus-quizzes" element={<PageTransition><QuizzesCriados /></PageTransition>} />
         </Route>
 
         <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />

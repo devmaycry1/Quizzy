@@ -5,6 +5,12 @@
       "nome": "Rick Sanchez",
       "email": "rick@email.com",
       "senha": "rick1234"
+    },
+    {
+      "id": "195b",
+      "nome": "Carlos Luiz",
+      "email": "carlos@email.com",
+      "senha": "carlosl12"
     }
   ],
   "quizzes": [

@@ -5,6 +5,15 @@ import "./NotFound.css";
 
 export default function NotFound() {
     const navigate = useNavigate();
+    const handleVoltar = () => {
+        const usuarioLogado = localStorage.getItem("usuarioLogado");
+
+        if (usuarioLogado) {
+            navigate("/home");
+        } else {
+            navigate("/login");
+        }
+    };
 
     return (
         <main className="not-found-page">
@@ -15,8 +24,8 @@ export default function NotFound() {
                     Oops! Parece que você navegou para fora do nosso universo de quizzes.
                     A rota que você tentou acessar não existe.
                 </p>
-                <button className="not-found-btn" onClick={() => navigate("/home")}>
-                    <FaHome className="icon" /> Voltar para a Terra (Início)
+                <button className="not-found-btn" onClick={handleVoltar}>
+                    <FaHome className="icon" /> Voltar para uma área segura.
                 </button>
 
             </div>

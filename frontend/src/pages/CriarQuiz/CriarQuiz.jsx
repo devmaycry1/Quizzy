@@ -60,7 +60,7 @@ export default function CriarQuiz() {
         }
 
         if (perguntas.length < 10) {
-            setErroValidacao(`Faltam ${10 - perguntas.length} perguntas! O quiz precisa ter no mínimo 10 para ser publicado.`);
+            setErroValidacao(`Faltam ${10 - perguntas.length} perguntas! O quiz precisa ter no mínimo 10 para ser criado.`);
             setTimeout(() => setErroValidacao(""), 4000);
             return;
         }

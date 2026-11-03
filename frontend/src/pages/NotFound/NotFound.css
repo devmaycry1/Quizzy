@@ -1,77 +1,201 @@
+/* ==========================================================================
+   NotFound.css - Estilo Stitch (Paleta Cósmica / Perdido no Espaço)
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap");
+
 .not-found-page {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    background-image: url("../../assets/Background2.png");
-    background-size: cover;
-    background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #0f131d;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  color: #dfe2f1;
+  position: relative;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Background Decorativo */
+.not-found-bg-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.decor-blob-nf-1 {
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 9999px;
+  background: rgba(124, 58, 237, 0.2);
+  filter: blur(90px);
+}
+
+.decor-blob-nf-2 {
+  position: absolute;
+  bottom: -10rem;
+  right: -5rem;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 9999px;
+  background: rgba(3, 181, 211, 0.15);
+  filter: blur(90px);
 }
 
 .not-found-container {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    padding: 60px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background: rgba(140, 82, 255, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 480px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.error-code {
-    font-size: 120px;
-    font-weight: 900;
-    line-height: 1;
-    margin: 0;
-    background: linear-gradient(to bottom, #C79AFE, #8800FF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 15px rgba(136, 0, 255, 0.6));
+/* Card Glassmorphism */
+.not-found-card-glass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #1c1f2a;
+  border-radius: 28px;
+  padding: 48px 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(74, 68, 85, 0.4);
+  box-sizing: border-box;
 }
 
-.error-title {
-    font-size: 32px;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+/* Ícone Bússola Animado */
+.compass-emblem-wrapper {
+  position: relative;
+  margin-bottom: 24px;
 }
 
-.error-msg {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #e0e0e0;
-    margin-bottom: 20px;
+.compass-glow-bg {
+  position: absolute;
+  inset: -8px;
+  background: linear-gradient(135deg, #7c3aed, #4cd7f6);
+  border-radius: 9999px;
+  filter: blur(14px);
+  opacity: 0.6;
+  animation: spinSlow 6s linear infinite;
 }
 
-.not-found-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(to right, #4c1182, #8800FF);
-    border: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 35px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 15px rgba(136, 0, 255, 0.4);
+.compass-icon-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #1c1f2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.not-found-btn:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(to right, #8800FF, #4c1182);
-    box-shadow: 0 6px 20px rgba(136, 0, 255, 0.6);
+.compass-symbol {
+  color: #4cd7f6;
+  filter: drop-shadow(0 0 8px rgba(76, 215, 246, 0.6));
+  animation: floatCompass 3s ease-in-out infinite;
+}
+
+/* Tipografia */
+.not-found-code {
+  font-size: 96px; /* 404 pode ser ligeiramente maior */
+  font-weight: 900;
+  line-height: 1;
+  margin: 0 0 16px 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: linear-gradient(135deg, #d2bbff 20%, #4cd7f6 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 16px rgba(124, 58, 237, 0.4));
+}
+
+.not-found-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.not-found-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #dfe2f1;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.not-found-msg {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ccc3d8;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 380px;
+}
+
+/* Botão de Ação */
+.not-found-action-btn {
+  width: 100%;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(to right, #7c3aed, #03b5d3);
+  color: #ede0ff;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.35);
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    opacity 0.2s;
+}
+
+.not-found-action-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-icon {
+  transition: transform 0.2s;
+}
+
+.not-found-action-btn:hover .btn-icon {
+  transform: translateY(-2px);
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatCompass {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }

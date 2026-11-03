@@ -1,0 +1,528 @@
+/* ==========================================================================
+   Perfil.css - Estilos Atualizados com Botão de Sair no Topbar
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+
+.perfil-layout {
+  background-color: #0f131d;
+  color: #dfe2f1;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
+}
+
+.perfil-bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-1 {
+  top: -8rem;
+  left: -8rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(124, 58, 237, 0.15);
+}
+
+.glow-2 {
+  top: 25%;
+  right: -6rem;
+  width: 18rem;
+  height: 18rem;
+  background-color: rgba(3, 181, 211, 0.1);
+}
+
+/* Banner Flutuante de Aviso */
+.perfil-banner-aviso {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(3, 181, 211, 0.9);
+  color: #001f26;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInOut 4s ease forwards;
+}
+
+.perfil-banner-aviso.erro {
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  85% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+.perfil-topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba(15, 19, 29, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(74, 68, 85, 0.2);
+}
+
+.perfil-topbar-content {
+  max-width: 42rem;
+  margin: 0 auto;
+  height: 4rem;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.perfil-back-btn {
+  background: none;
+  border: none;
+  color: #dfe2f1;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.perfil-back-btn:hover {
+  background-color: #262a35;
+  color: #4cd7f6;
+}
+
+.perfil-logo-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.perfil-logout-topbar-btn {
+  background: rgba(239, 68, 68, 0.25);
+  border: 1px solid rgba(239, 68, 68, 0.55);
+  color: #ff6b6b;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.6rem 1.15rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-left: auto;
+  transition: all 0.2s ease;
+}
+
+.perfil-logout-topbar-btn svg {
+  font-size: 1.05rem;
+}
+
+.perfil-logout-topbar-btn:hover {
+  background: rgba(239, 68, 68, 0.45);
+  border-color: #ff4d4d;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.45);
+  transform: translateY(-1px);
+}
+
+.perfil-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  padding-top: 5.5rem;
+}
+
+.perfil-wrapper {
+  width: 100%;
+  max-width: 42rem;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.perfil-card {
+  background-color: rgba(28, 31, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(74, 68, 85, 0.25);
+}
+
+.perfil-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.perfil-avatar-wrapper {
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d2bbff, #4cd7f6, #7c3aed);
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.45);
+}
+
+.perfil-avatar-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #262a35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.perfil-user-details h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #dfe2f1;
+  margin: 0 0 0.2rem 0;
+}
+
+.perfil-username {
+  font-size: 0.9rem;
+  color: #ccc3d8;
+}
+
+.perfil-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.perfil-stat-item {
+  background-color: rgba(49, 53, 64, 0.6);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(74, 68, 85, 0.15);
+}
+
+.perfil-stat-icon-box {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.text-purple {
+  background-color: rgba(124, 58, 237, 0.2);
+  color: #d2bbff;
+}
+
+.text-cyan {
+  background-color: rgba(3, 181, 211, 0.2);
+  color: #4cd7f6;
+}
+
+.text-blue {
+  background-color: rgba(76, 215, 246, 0.15);
+  color: #4cd7f6;
+}
+
+.perfil-stat-value {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #dfe2f1;
+  line-height: 1.2;
+}
+
+.perfil-stat-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc3d8;
+  margin-top: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+/* Barra de Navegação por 4 Abas Harmonizadas */
+.perfil-actions-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  background-color: rgba(28, 31, 42, 0.6);
+  padding: 0.35rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(74, 68, 85, 0.25);
+}
+
+.perfil-nav-tab-btn {
+  background: transparent;
+  border: none;
+  color: #ccc3d8;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.65rem 0.25rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.perfil-nav-tab-btn:hover {
+  color: #dfe2f1;
+  background-color: rgba(38, 42, 53, 0.5);
+}
+
+.perfil-nav-tab-btn.active {
+  background-color: #7c3aed;
+  color: #ede0ff;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+.perfil-section-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.perfil-section-box h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #dfe2f1;
+  margin: 0;
+}
+
+.perfil-section-desc {
+  font-size: 0.85rem;
+  color: #ccc3d8;
+  margin: 0;
+}
+
+/* Grid de Seleção de Avatar */
+.perfil-avatar-picker-standalone {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  background-color: #1c1f2a;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(74, 68, 85, 0.25);
+}
+
+.perfil-avatar-option-btn-large {
+  background-color: #262a35;
+  border: 1px solid rgba(74, 68, 85, 0.3);
+  border-radius: 0.85rem;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.perfil-avatar-option-btn-large:hover {
+  background-color: #353944;
+  border-color: #4cd7f6;
+}
+
+.perfil-avatar-option-btn-large.active {
+  background-color: rgba(124, 58, 237, 0.25);
+  border-color: #7c3aed;
+  box-shadow: 0 0 16px rgba(124, 58, 237, 0.4);
+}
+
+.perfil-avatar-option-btn-large .avatar-emoji {
+  font-size: 1.75rem;
+}
+
+.perfil-avatar-option-btn-large .avatar-name {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc3d8;
+}
+
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.perfil-inputs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.perfil-inputs-group input {
+  width: 100%;
+  background-color: #1c1f2a;
+  color: #dfe2f1;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(74, 68, 85, 0.25);
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.perfil-inputs-group input:focus {
+  border-color: #4cd7f6;
+}
+
+.perfil-submit-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #7c3aed, #564eec, #03b5d3);
+  color: #ede0ff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
+  transition: opacity 0.2s;
+}
+
+.perfil-submit-btn:hover {
+  opacity: 0.95;
+}
+
+.perfil-empty-notice {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #1c1f2a;
+  color: #ccc3d8;
+  font-size: 0.9rem;
+  border: 1px solid rgba(74, 68, 85, 0.25);
+}
+
+.perfil-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.perfil-history-card {
+  border-radius: 1rem;
+  background-color: rgba(28, 31, 42, 0.85);
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(74, 68, 85, 0.2);
+  transition: border-color 0.2s;
+}
+
+.perfil-history-card:hover {
+  border-color: rgba(76, 215, 246, 0.4);
+}
+
+.perfil-history-info h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #dfe2f1;
+  margin: 0 0 0.2rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14rem;
+}
+
+.perfil-history-info span {
+  font-size: 0.8rem;
+  color: #ccc3d8;
+}
+
+.perfil-history-score-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #262a35;
+  color: #4cd7f6;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pill-icon {
+  font-size: 0.9rem;
+}
+
+.perfil-history-score-pill span {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}

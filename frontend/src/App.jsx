@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion"; // <-- Importe o Framer Motion
+import { AnimatePresence } from "framer-motion";
 
 import Splash from "./pages/Splash/Splash";
 import Login from "./pages/Login/Login";
@@ -10,6 +10,7 @@ import Resultado from "./pages/Resultado/Resultado";
 import Unauthorized from "./pages/Unauthorized/Unauthorized";
 import NotFound from "./pages/NotFound/NotFound";
 import CriarQuiz from "./pages/CriarQuiz/CriarQuiz";
+import Perfil from "./pages/Perfil/Perfil"
 
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import PageTransition from "./components/PageEffect/PageEffect";
@@ -19,24 +20,104 @@ function RotasAnimadas() {
   const location = useLocation();
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageTransition>
+              <Splash />
+            </PageTransition>
+          }
+        />
 
-        <Route path="/" element={<PageTransition><Splash /></PageTransition>} />
-        <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
-        <Route path="/cadastro" element={<PageTransition><Cadastro /></PageTransition>} />
-        <Route path="/unauthorized" element={<PageTransition><Unauthorized /></PageTransition>} />
+        <Route
+          path="/login"
+          element={
+            <PageTransition>
+              <Login />
+            </PageTransition>
+          }
+        />
+        
+        <Route
+          path="/perfil"
+          element={
+            <PageTransition>
+              <Perfil />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/cadastro"
+          element={
+            <PageTransition>
+              <Cadastro />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/unauthorized"
+          element={
+            <PageTransition>
+              <Unauthorized />
+            </PageTransition>
+          }
+        />
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/home" element={<PageTransition><Home /></PageTransition>} />
-          <Route path="/quiz" element={<PageTransition><Quiz /></PageTransition>} />
-          <Route path="/resultado" element={<PageTransition><Resultado /></PageTransition>} />
-          <Route path="/criar-quiz" element={<PageTransition><CriarQuiz /></PageTransition>} />
-          <Route path="/meus-quizzes" element={<PageTransition><QuizzesCriados /></PageTransition>} />
+          <Route
+            path="/home"
+            element={
+              <PageTransition>
+                <Home />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <PageTransition>
+                <Quiz />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/resultado"
+            element={
+              <PageTransition>
+                <Resultado />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/criar-quiz"
+            element={
+              <PageTransition>
+                <CriarQuiz />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/meus-quizzes"
+            element={
+              <PageTransition>
+                <QuizzesCriados />
+              </PageTransition>
+            }
+          />
         </Route>
 
-        <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
-
+        <Route
+          path="*"
+          element={
+            <PageTransition>
+              <NotFound />
+            </PageTransition>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );

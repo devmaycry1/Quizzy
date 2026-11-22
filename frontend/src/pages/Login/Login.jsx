@@ -134,7 +134,7 @@ export default function Login() {
                 <input
                   type="text"
                   name="nomeUsuario"
-                  placeholder="campeao@quizzy.app"
+                  placeholder="Nome De Usuário"
                   value={dados.nomeUsuario}
                   onChange={handleChange}
                   onBlur={handleBlur}
